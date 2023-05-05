@@ -28,13 +28,30 @@ interface Data {
 }
 
 async function fetchMirror(id: string): Promise<MirrorDto> {
-  const res = await fetch(`/api/mirrors/${id}`);
-  if (!res.ok) {
-    throw new Error(`API call failed: ${res.status} ${await res.text()}`);
-  }
-  const json = await res.json();
-  writeCache(`mirrors_${id}`, json);
-  return json;
+  // const res = await fetch(`/api/mirrors/${id}`);
+  // if (!res.ok) {
+  //   throw new Error(`API call failed: ${res.status} ${await res.text()}`);
+  // }
+  const json: any = {
+    "rust-cratesio": {
+      "id": "rust-cratesio",
+      "url": "/rust-cratesio",
+      "name": {
+        "zh": "crates.io",
+        "en": "crates.io"
+      },
+      "desc": {
+        "zh": "crates.io 镜像",
+        "en": "crates.io mirror"
+      },
+      "helpUrl": "/docs/rust-cratesio",
+      "status": "succeeded",
+      "lastUpdated": "1683288033",
+    }
+  };
+  // const json = await res.json();
+  writeCache(`mirrors_${id}`, json[id]);
+  return json[id];
 }
 
 const MirrorDoc = ({ data, children }: { data: Data }) => {

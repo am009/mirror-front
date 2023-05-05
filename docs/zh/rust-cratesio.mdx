@@ -1,0 +1,14 @@
+---
+mirrorId: rust-cratesio
+---
+
+参照 panamax 项目说明： [链接](https://github.com/panamax-rs/panamax)  （不包含Rustup镜像，仅包含crates.io镜像）
+
+在`~/.cargo/config`中增加
+
+```
+[source.my-mirror]
+registry = "http://rust-crates.fancybag.cn/crates.io-index"
+[source.crates-io]
+replace-with = "my-mirror"
+```

@@ -55,22 +55,38 @@ const networkMap = {
 };
 
 async function fetchMirrors(): Promise<MirrorDto[]> {
-  const res = await fetch('/api/mirrors');
-  if (!res.ok) {
-    throw new Error(`API call failed: ${res.status} ${await res.text()}`);
-  }
-  const json = await res.json();
+  // const res = await fetch('/api/mirrors');
+  // if (!res.ok) {
+  //   throw new Error(`API call failed: ${res.status} ${await res.text()}`);
+  // }
+  // const json = await res.json();
+  const json: any = [{
+    "id": "rust-cratesio",
+    "url": "/rust-cratesio",
+    "name": {
+      "zh": "crates.io",
+      "en": "crates.io"
+    },
+    "desc": {
+      "zh": "crates.io 镜像",
+      "en": "crates.io mirror"
+    },
+    "helpUrl": "/docs/rust-cratesio",
+    "status": "succeeded",
+    "lastUpdated": "1683288033",
+  }];
   writeCache('mirrors', json);
   return json;
 }
 
 async function fetchNetworkMode(): Promise<number> {
-  const res = await fetch('/api/is_campus_network');
-  if (!res.ok) {
-    return 0;
-  }
-  const json = await res.json();
-  const c = Number.isInteger(json) ? json : 0;
+  // const res = await fetch('/api/is_campus_network');
+  // if (!res.ok) {
+  //   return 0;
+  // }
+  // const json = await res.json();
+  // const c = Number.isInteger(json) ? json : 0;
+  const c: any = 0;
   writeCache('networkMode', c);
   return c;
 }

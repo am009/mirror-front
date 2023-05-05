@@ -126,16 +126,5 @@ module.exports = {
         },
       },
     },
-  ],
-  developMiddleware: app => {
-    app.use(
-      '/api',
-      createProxyMiddleware({
-        target: 'http://mirrors.zju.edu.cn',
-        onProxyReq: (proxyRes, req, res) => {
-          proxyRes.setHeader('host', 'mirrors.zju.edu.cn');
-        },
-      }),
-    );
-  }
+  ]
 }
