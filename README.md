@@ -8,7 +8,9 @@ api基本只有两个，一个`/mirrors`，一个`/mirror/<id>`。直接源码�
 
 ## 部署
 
-直接
+```
+scp -r ./public/* labnas:/var/www/zjumirror/
+```
 
 
 ![cover](https://raw.githubusercontent.com/RalXYZ/repo-pictures/main/mirror-front/cover.png)  

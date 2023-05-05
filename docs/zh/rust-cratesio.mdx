@@ -2,13 +2,19 @@
 mirrorId: rust-cratesio
 ---
 
-参照 panamax 项目说明： [链接](https://github.com/panamax-rs/panamax)  （不包含Rustup镜像，仅包含crates.io镜像）
+直接访问：http://rust-crates.fancybag.cn/ 以获得详细说明（注意不包含Rustup镜像，不要设置里面rustup相关的步骤）
 
 在`~/.cargo/config`中增加
 
 ```
-[source.my-mirror]
-registry = "http://rust-crates.fancybag.cn/crates.io-index"
+[source.hust-mirror]
+registry = "http://rust-crates.fancybag.cn/git/crates.io-index"
+[source.hust-mirror-sparse]
+registry = "sparse+http://rust-crates.fancybag.cn/index/"
+
 [source.crates-io]
-replace-with = "my-mirror"
+# To use sparse index, change "hust-mirror" to "hust-mirror-sparse".
+replace-with = "hust-mirror"
 ```
+
+或者参照 panamax 项目说明： [链接](https://github.com/panamax-rs/panamax)  （不包含Rustup镜像，仅包含crates.io镜像）
