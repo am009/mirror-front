@@ -41,7 +41,7 @@ interface Data {
 
 const networkMap = {
   0: {
-    text: '校外网络',
+    text: '仅校内访问',
     color: 'primary',
   },
   1: {
@@ -157,7 +157,7 @@ const Index = ({ data }: { data: Data }) => {
         justifyContent: 'space-between',
       }}
     >
-      <Seo title="ZJU Mirror" />
+      <Seo title="C502 Mirror" />
       <Grid
         container
         spacing={{ xs: 6 }}
@@ -193,7 +193,7 @@ const Index = ({ data }: { data: Data }) => {
                     color="primary"
                     sx={{ fontSize: { xs: 48, sm: 64 }, mt: -1 }}
                   >
-                    <Trans>ZJU Mirror</Trans>
+                    <Trans>C502 Mirror</Trans>
                   </Typography>
                 </Grid>
                 <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -216,7 +216,7 @@ const Index = ({ data }: { data: Data }) => {
                   color="primary"
                   sx={{ fontSize: { xs: 21, sm: 28 } }}
                 >
-                  <Trans>浙江大学开源软件镜像站</Trans>
+                  <Trans>C502开源软件镜像站</Trans>
                 </Typography>
                 <Typography
                   variant="subtitle1"

@@ -33,7 +33,7 @@ export default () => {
               <Box maxWidth={520}>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
-                    浙江大学开源软件镜像站是一个致力于普及开源软件，方便校内外用户高效访问开源项目的各种资源的非盈利计划。
+                    C502开源软件镜像站是从浙江大学镜像那边抄过来的，一个致力于普及开源软件，方便校内外用户高效访问开源项目的各种资源的非盈利计划。
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
@@ -75,7 +75,7 @@ export default () => {
                   </Typography>
                   <Typography gutterBottom variant="body2">
                     <Link
-                      href="mailto:mirrors@zju.edu.cn"
+                      href="mailto:warrenwjk@qq.com"
                       color="text.secondary"
                       underline="hover"
                     >
@@ -144,11 +144,6 @@ export default () => {
         </Grid>
         <Grid item>
           <Grid container direction="row" columnSpacing={4} rowSpacing={2} alignItems="center">
-            <Grid item>
-              <Link href="https://zuits.zju.edu.cn/">
-                <ZjuIcon width="16rem"/>
-              </Link>
-            </Grid>
             <Grid item>
               <Link href="https://www.zjusct.io">
                 <Zjusct width="12rem"/>

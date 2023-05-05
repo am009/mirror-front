@@ -89,7 +89,7 @@ const MirrorDoc = ({ data, children }: { data: Data }) => {
         justifyContent: 'space-between',
       }}
     >
-      <Seo title={`${name} | ZJU Mirror`} />
+      <Seo title={`${name} | C502 Mirror`} />
       <Box>
         <Box sx={{ px: { xs: 4, sm: 8 }, py: 4 }} position="relative">
           <Grid
@@ -103,7 +103,7 @@ const MirrorDoc = ({ data, children }: { data: Data }) => {
               <Grid container justifyContent="space-between">
                 <Link color="primary" underline="hover" to="/">
                   <Typography variant="h5" component="div" color="primary">
-                    <Trans>ZJU Mirror</Trans>
+                    <Trans>C502 Mirror</Trans>
                   </Typography>
                 </Link>
                 <Grid item>
